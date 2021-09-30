@@ -64,7 +64,8 @@ pub fn parse_program_map(mut stream: &mut BitReader<BigEndian>, mut count: &mut 
   let pi_length = ((data[2] as u16 & 0x0003) << 8) + data[3] as u16;
 
   if pi_length != 0 {
-    unimplemented!();
+    //unimplemented!();
+    println!("pi_length = {}");
   }
 
   let mut programs = vec![];
