@@ -302,8 +302,6 @@ pub fn parse_payload(mut stream: &mut BitReader<BigEndian>, mut count: &mut usiz
           let _more = stream.read::<u8>(6).unwrap();
           *count += 1;
         }
-      } else {
-        unimplemented!();
       }
 
       if pes_packet_length > 0 {
